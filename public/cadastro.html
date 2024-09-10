@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote uma Família | Complete seu Cadastro </title>
+    <link rel="shortcut icon" href="assets/img/logo/1_auf_icon_flat.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/modais.css">
+
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.2); 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5% 0;
+        }
+
+        #modal-cadastro-familia {
+            background-color: #fff;
+            min-width: 100%; 
+            max-width: 1000px;
+            min-height: 100% !important;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #modal-cadastro-familia #content {
+            width: 80%;
+        }
+
+        @media (min-width: 768px) {
+            #modal-cadastro-familia {
+                min-width: 70%;
+                min-height: 80% !important;
+            }
+        }
+
+    </style>
+</head>
+<body style="display: none;">
+    <div class="modal" id="modal-cadastro-familia">
+        <div id="content">
+        <h2>Complete seu cadastro</h2><br>
+
+        <form action="" method="post" enctype="multipart/form-data" id="form-sign-up-family">
+
+            <input type="hidden" name="acao" value="cadastrar">
+
+            <div class="input-form">
+                <label for="name-sign-up-family">Seu nome completo</label>
+                <input name="name" id="name-sign-up-family" type="text" placeholder="João da Silva" required>
+                <span class="error-message" id="field-0-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="email-sign-up-family">Email</label>
+                <input name="email" id="email-sign-up-family" type="email" placeholder="seu@email.com" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="password-sign-up-family">Senha</label>
+                <input name="password" id="password-sign-up-family" type="password" placeholder="********" required>
+                <span class="error-message" id="password-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="phone-sign-up-family">Telefone</label>
+                <input name="phone" id="phone-sign-up-family" type="tel" placeholder="Formato: 51 99999 9999" required>
+                <span class="error-message" id="phone-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="city">Cidade</label>
+                <select id="city" name="city"placeholder="Sua cidade" required>
+                <option value="">Selecione uma cidade</option>
+                </select>
+                <span class="error-message" id="field-1-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="photo-sign-up-family">Foto</label>
+                <input type="file" id="photo-sign-up-family" name="photo" accept="image/png, image/jpeg" required>
+                <span class="error-message" id="field-2-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="description">Conte sua história</label>
+                <textarea maxlength="300" name="description" id="description" type="text" placeholder="Digite aqui" required></textarea>
+                <span id="charCount">0 / 300</span>
+                <span class="error-message" id="field-3-error"></span>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="terms-checkbox" required>
+                <label for="terms-checkbox">Ao criar minha conta, eu aceito os <a href="terms.html" target="_blank">Termos de Uso</a></label>
+                <span class="error-message" id="field-4-error"></span>
+            </div>
+            <br>
+            <input type="submit" id="submit-sign-up-family" name="cadastrar" value="Cadastrar-se">
+
+        </form>
+    </div>
+
+    <script type="module" src="assets/js/registrofamilia.min.js"></script>
+    <script type="module">
+        import { loadCities } from './assets/js/loadCities.min.js'
+        document.addEventListener('DOMContentLoaded', loadCities);
+
+        // Verificar senha via prompt
+        document.addEventListener('DOMContentLoaded', async () => {
+            const preHashedPassword = '42be56fc07e174c02b2ee1626124727c3623eca77d0a24b152eb7bdf6a398ec1';
+            const enteredPassword = prompt("Insira a senha que sua ONG forneceu:");
+
+            async function sha256(message) {
+                const msgBuffer = new TextEncoder().encode(message);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                return hashHex;
+            }
+
+            const enteredHashedPassword = await sha256(enteredPassword);
+
+            if (enteredHashedPassword === preHashedPassword) {
+                document.body.style.display = 'block';
+            } else {
+                alert("Senha incorreta.");
+            }
+        });
+    </script>
+</body>
+</html>

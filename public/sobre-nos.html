@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote uma Família | Sobre nós</title>
+    <link rel="shortcut icon" href="assets/img/logo/1_auf_icon_flat.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/modais.css">
+    <link rel="stylesheet" href="assets/css/about-us.css">
+    </head>
+
+    <body class="page-team">
+        <!-- ======= Navbar ======= -->
+        <header id="header" class="header">
+            <div class="container-header" id="navbar-template">
+                <a href="/" class="logo">
+                    <img src="assets/img/logo/1_auf_logo_flat_white.png" alt="logo" class="img-logo">
+                  </a>
+                  <nav id="navbar" class="navbar">
+                  <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="#" class="active">Sobre nós</a></li>
+                    <li id="navbar-profile" class="d-none"><a href="#" id="profile-link">Meu perfil</a></li>
+                    <li id="navbar-sign-up-donor"><a href="#" onclick="cadastroDoadorModal();">Quero ser doador</a></li>
+                    <li id="navbar-sign-up-family"><a href="/sobre-nos.html">Quero receber ajuda</a></li>
+                    <li id="navbar-sign-up-ong"><a href="#" onclick="ongModal();">Sou uma ONG</a></li>
+                    <li id="navbar-login"><a href="#" onclick="loginModal();">Entrar</a></li>
+                    <li id="navbar-logout" class="d-none"><a href="#">Sair</a></li>     
+                  </ul>
+                  </nav>
+            </div>
+            <i class="mobile-nav-toggle mobile-nav-show ri-menu-line"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none ri-close-fill"></i>
+        </header>
+
+        <main id="main">
+            <!-- ======= Header Section ======= -->
+            <div class="container-top">
+                <div class="container-top-inside">
+                <h2>Sobre nós</h2>
+                </div>
+            </div><!-- End Breadcrumbs -->
+
+            <!-- ======= About Us Section ======= -->
+            <section class="about-us">
+                <div class="container-about-us" data-aos="fade-up">
+                    <div class="section-header">
+                        <h2>Adote uma Família</h2>
+                    </div>
+
+                    <!-- <h3>Nossa História:</h3> -->
+                    <p>Após a tragédia que começou em 29 de abril de 2024 no Rio Grande do Sul, Julia Badin decidiu agir para ajudar as famílias afetadas. Junto de outros estudantes da University of South Florida, ela lançou uma iniciativa para apoiar essas pessoas. Desde 14 de maio, trabalhamos no desenvolvimento de um aplicativo para tornar essa ajuda uma realidade o mais rápido possível. Com muito esforço e dedicação, alcançamos nossa meta!</p>
+                    <p>Nosso projeto foi criado para auxiliar diretamente as pessoas do Rio Grande do Sul. Através do nosso aplicativo, você pode doar ou receber doações de forma transparente e eficaz. Os usuários que precisam de ajuda podem postar fotos e compartilhar suas histórias, enquanto aqueles que desejam doar podem escolher qual das famílias eles querem doar. O aplicativo facilita a conexão entre doadores e beneficiários, mas não realiza transferências financeiras diretamente.</p>
+                    <p><b style="font-size: 105%;">É importante observar que, para ser um beneficiário, é preciso entrar em contato com uma das ONGs parceiras para realizar o cadastro (verifique a lista abaixo).</b> Para agilizar o cadastro, inclua na sua mensagem o seu email. Esse processo visa garantir maior segurança para todos os usuários.</p>
+                    <p>Para as ONGS que têm interesse em ajudar e apoiar nossa causa, entre em contato pelo nosso <a href="mailto:adoteumafamilia2024@gmail.com" style="color: var(--color-default);">email</a> ou <a href="https://www.instagram.com/adoteumafamilia_" target="_blank" style="color: var(--color-default);">Instagram</a> com suas informações de contato e logo. Agradecemos a sua ajuda!</p>
+            </section> <!-- End About Us Section -->
+
+
+            <!-- ======= ONGs Section ======= -->
+            <section data-aos="fade-up">
+                <div class="section-header">
+                    <h2>Entidades Parceiras</h2>
+                </div>
+
+                <div class="row container-ong" id="ongs-list">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="ong-member">
+                            <div class="member-img">
+                                <img src="assets/img/ongs/coletivo-abrigo.png">
+                            </div>
+                            <div class="member-info">
+                                <h4>Coletivo Abrigo</h4>
+                                <span>Porto Alegre</span>
+                                <span>+55 51 98222-9080</span>
+                                <span>contato@coletivoabrigo.org.br</span>
+                                <span><a href="https://www.instagram.com/coletivo.abrigo/" target="_blank"><b>Link para contato</b></a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section> <!-- End ONGs Section -->
+
+
+            <!-- ======= Team Section ======= -->
+            <section class="team" data-aos="fade-up" data-aos-delay="200">
+                <div class="section-header">
+                    <h2>Nosso Time</h2>
+                </div>
+
+                <div class="container-team">
+                    <div class="row gy-4">
+                        <div class="col"> <!-- Membro 1 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/julia.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/juliabadin/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Julia Badin</h4> 
+                                    <span>Meu nome é Julia, tenho 20 anos e curso ciência da computação na University of South Florida. Tive a ideia de criar esse projeto após voltar para o Rio Grande do Sul durante as férias da faculdade e ver a destruição que atingiu nosso estado. Espero que através dele eu consiga retribuir toda a ajuda que o povo gaúcho já me ofereceu.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+        
+                        <div class="col"> <!-- Membro 2 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/gustavo.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/gustavo-galvao-e-silva-125884209/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Gustavo Galvão</h4>
+                                    <span>Oi! Meu nome é Gustavo Galvão e Silva, sou natural de Goiânia e estudo ciência da computação na University of South Florida. Como integrante do Adote uma Família, espero poder contribuir com o desenvolvimento do projeto para que possamos ajudar aqueles que foram impactados pelos desastres ocorridos no Rio Grande do Sul.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+        
+                        <div class="col"> <!-- Membro 3 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/sofia.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/sofia-de-oliveira-camargo-625a42233/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Sofia Camargo</h4>
+                                    <span>Meu nome é Sofia, tenho 18 anos e estou no segundo ano me formando em engenharia mecânica na University of South Florida. Sou de SP, porém as notícias do que está acontecendo no Rio Grande do Sul me impactaram muito. Então espero muito que esse projeto consiga alcançar e ajudar as pessoas que estão sofrendo consequências. 
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+        
+                        <div class="col"> <!-- Membro 4 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/cassio.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/c%C3%A1ssio-dalla-barba-everling-271216292/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Cássio Everling</h4>
+                                    <span>Meu nome é Cássio, tenho 18 anos e sou estudante de Ciência da Computação na University of South Florida. Nasci e cresci em Santa Catarina, mas minha família é gaúcha. Vejo neste projeto uma oportunidade de causar um impacto positivo na vida das pessoas que perderam tanto e sofreram com as inundações no Rio Grande Do Sul.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+                    </div><!-- End Row 1 -->
+        
+                    <div class="row gy-5">
+                        <div class="col"> <!-- Membro 5 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/lucas-bianco.jpg">
+                                    <div class="social">
+                                        <a href="https://www.linkedin.com/in/lucas-araujo-bianco-7b6153295/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                    </div>
+                                    <div class="member-info">
+                                    <h4>Lucas Bianco</h4>
+                                    <span>Meu nome é Lucas, tenho 19 anos e estou estudando ciência da computação na University of South Florida. Quero ajudar o máximo possível para que esta ideia saia do papel e ajude financeiramente os gaúchos que sofreram tanto com essa tragédia. Além disso, estou indo para meu segundo ano de faculdade e espero poder aplicar os conceitos que tenho aprendido e aprimorar meu conhecimento.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+    
+                        <div class="col"> <!-- Membro 6 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/gabriela.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/gabriela-fluzer/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Gabriela Fluzer</h4>
+                                    <span>Meu nome é Gabriela, tenho 20 anos e estou no meu último ano de faculdade cursando Marketing Digital na University of South Florida. Sou de Porto Alegre RS e, com toda a tragédia acontecendo aqui agora, resolvi dedicar parte do meu tempo de férias para me envolver neste projeto. Espero poder contribuir com as minhas experiências e poder ajudar o máximo possível de famílias prejudicadas pela enchente. 
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+    
+                        <div class="col"> <!-- Membro 7 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/lucas-pereira.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/lucas-pereira-ba8872295/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Lucas Pereira</h4>
+                                    <span>Meu nome é Lucas, tenho 18 anos e estou no segundo ano de faculdade estudando ciência da computação na University of South Florida. Originalmente sou de SP, mas como todos os outros me solidarizo com a causa. Eu entrei no projeto visando ajudar o grupo com esta ideia que pode causar grande impacto nessas pessoas que estão passando por tanta dificuldade, e eu espero que nosso grupo consiga ajudar o máximo de famílias possíveis.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+    
+                        <div class="col"> <!-- Membro 8 -->
+                            <div class="team-member">
+                                <div class="member-img">
+                                    <img src="assets/img/team/maria-julia.jpg">
+                                    <div class="social">
+                                    <a href="https://www.linkedin.com/in/maria-j%C3%BAlia-mussa-martins-a64723303/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>Maria Julia</h4>
+                                    <span>Meu nome é Maria Julia, tenho 18 anos e acabei de me formar no ensino médio, em agosto começo a cursar Psicologia na University of South Florida. Sou de Natal/RN, mas moro nos Estados Unidos faz 3 anos. Decidi entrar no Adote uma Família porque prestar apoio a quem precisa é fundamental pra superar esse momento difícil na história do nosso país. Espero que esse projeto possa fazer a diferença na vida das pessoas afetadas pela enchente.
+                                    </span>
+                                </div>
+                            </div>
+                        </div><!-- End Team Member -->
+                    </div><!-- End Row 2 -->
+                </div><!-- End Container Team -->
+            </section><!-- End Team Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer-template" class="footer">
+            <div class="footer-content">
+                <div class="container">
+                  <div class="row gy-5">
+                    <div class="col-lg-8 col-md-12 footer-info">
+                      <a href="/" class="logo d-flex align-items-center">
+                        <img src="assets/img/logo/1_auf_logo_flat.png" alt="logo">
+                      </a>
+                      <p>Nosso compromisso é conectar quem precisa de ajuda a quem quer ajudar, criando uma rede de solidariedade para reconstruir vidas e comunidades.</p>
+                    </div>
+          
+                    <div class="col-lg-4 col-6 footer-links">
+                      <h4>Links úteis</h4>
+                      <ul>
+                        <li><i class="ri-subtract-fill"></i> <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a></li>
+                        <li><i class="ri-subtract-fill"></i> <a href="https://www.linkedin.com/company/adote-uma-fam%C3%ADlia/about/" target="_blank">Linkedin</a></li>
+                        <li><i class="ri-subtract-fill"></i> <a href="/termos">Termos e Condições</a></li>
+                      </ul>
+                    </div>
+          
+                  </div>
+                </div>
+              </div>
+        </footer>
+
+        <a href="#" class="scroll-top"><i class="ri-arrow-up-line"></i></a>
+
+       <!-- ======= Modais ======= -->
+    
+        <!-- MODAL ONG -->
+        <div id="fundo-modal-contato-ong" class="hide">
+            <div class="modal modal-login">
+            <div id="content" style="text-align:center">
+                <h2>Como se tornar uma ONG parceira</h2>
+                <br><br><br>
+                <i class="ri-close-fill" onclick="ongModal();"></i>
+                <p>Entre em contato conosco através do nosso <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a> ou pelo email <a href="mailto:adoteumafamilia2024@gmail.com">adoteumafamilia2024@gmail.com</a></p>
+            </div>
+            </div>
+        </div> 
+    
+        <!-- LOGIN -->
+        <div id="fundo-modal-login" class="hide">
+            <div class="modal modal-login">
+                <div id="content">
+                    
+                    <h2>Entrar</h2>
+                    <i class="ri-close-fill" onclick="loginModal();"></i>
+        
+                    <form action="" method="post" id="form-login">
+                    <input type="hidden" name="acao" value="login">
+                    <div class="input-form">
+                        <label for="email-login">Email</label>
+                        <input name="email" id="email-login" type="email" placeholder="seu@email.com" required="required">
+                        <span class="error-message" id="email-error-login"></span>
+                    </div>
+        
+                    <div class="input-form">
+                        <label for="password-login">Senha</label>
+                        <input name="password" id="password-login" type="password" placeholder="********" required="required">
+                        <span class="error-message" id="password-error-login"></span>
+                    </div>
+        
+                    <h6><a target="_blank" onclick="redefinirSenhaModal()">Esqueci minha senha</a></h6><br>
+        
+                    <input type="submit" id="submit-login" name="entrar" value="Entrar">
+        
+                    <button class="button" onclick="loginModal(); selecionarCadastroModal();">
+                        <a id="cadastrar-login">Novo por aqui?</a>
+                    </button>
+        
+                    </form><br>
+                </div>
+            </div>
+        </div> 
+    
+        <!-- REDEFINIR SENHA -->
+        <div id="fundo-modal-redefinir-senha" class="hide">
+            <div class="modal modal-login">
+            <div id="content" style="text-align:center">
+                <h2>Esqueci minha senha</h2><br>
+                <i class="ri-close-fill" onclick="redefinirSenhaModal();"></i>
+                <p>Informe seu e-mail cadastrado que enviaremos as instruções para você redefinir a sua senha.</p><br>
+                <input class="form-search" type="search" placeholder="E-mail" aria-label="Search"><br><br>
+                <input type="submit" name="email" id="submit-redefinir-senha" onclick="redefinirSenhaModal();" value="Redefinir senha" required="required">
+            </div>
+            </div>
+        </div> 
+    
+        <!-- CADASTRO DOADOR -->
+        <div id="fundo-modal-cadastro-doador" class="hide">
+            <div class="modal" id="modal-cadastro-doador">
+              <div id="content">
+                <h2>Cadastrar-se como Doador</h2>
+                <i class="ri-close-fill" onclick="cadastroDoadorModal();"></i>
+      
+                <form action="" method="post" enctype="multipart/form-data" id="form-sign-up-donor">
+      
+                    <input type="hidden" name="acao" value="cadastrar">
+      
+                    <div class="input-form">
+                        <label for="name-sign-up-donor">Seu nome completo</label>
+                        <input name="name" id="name-sign-up-donor" type="text" placeholder="João da Silva" required>
+                        <span class="error-message" id="field-0-error"></span>
+                      </div>
+      
+                    <div class="input-form">
+                        <label for="email-sign-up-donor">Email</label>
+                        <input name="email" id="email-sign-up-donor" type="email" placeholder="seu@email.com" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+      
+                    <div class="input-form">
+                        <label for="password-sign-up-donor">Senha</label>
+                        <input name="password" id="password-sign-up-donor" type="password" placeholder="********" required>
+                        <span class="error-message" id="password-error"></span>
+                      </div>
+      
+                    <div class="input-form">
+                      <label for="phone-sign-up-donor">Telefone</label>
+                      <input name="phone" id="phone-sign-up-donor" type="tel" placeholder="Formato: 51 99999 9999" required>
+                      <span class="error-message" id="phone-error"></span>
+                    </div>
+      
+                    <div class="input-form">
+                      <label for="photo-sign-up-donor">Foto (opcional)</label>
+                      <input type="file" id="photo-sign-up-donor" name="photo" accept="image/png, image/jpeg">
+                    </div>
+      
+                    <div class="input-form">
+                      <label for="city">Cidade para onde deseja doar (opcional)</label>
+                      <select id="city" name="city"placeholder="Cidade de preferência">
+                        <option value="">Selecione uma cidade</option>
+                      </select>
+                   </div>
+      
+                    <div class="checkbox">
+                      <input type="checkbox" name="checkbox" id="terms-checkbox" required>
+                      <label for="terms-checkbox">Ao criar minha conta, eu aceito os <a href="/termos" target="_blank">Termos de Uso</a></label>
+                    </div><br>
+      
+                    <input type="submit" id="submit-sign-up-donor" name="cadastrar" value="Cadastrar-se">
+      
+                    <button class="button" onclick="cadastroDoadorModal(); loginModal();">
+                      <a id="cadastrar-login">Já tenho uma conta</a>
+                    </button>
+      
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- TIPO DE CADASTRO -->
+        <div id="fundo-modal-selecionar-cadastro" class="hide">
+            <div class="modal modal-login">
+            <div id="content" style="text-align:center">
+                <br><h2>Desejo me cadastrar como</h2>
+                <i class="ri-close-fill" onclick="selecionarCadastroModal();"></i>
+                <br><br><button class="button" onclick="cadastroDoadorModal(); selecionarCadastroModal();"><a href="#" id="cadastrar-login">Doador</a></button>
+                <button class="button" onclick="selecionarCadastroModal();" style="float: left;"><a href="/sobre-nos" id="cadastrar-login">Família</a></button>
+            </div>
+            </div>
+        </div> 
+        <!-- End Modais -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+        <script src="assets/js/main.min.js?v=1.0.0"></script>
+        
+        <!-- <script type="module" src="assets/js/inicializacaofirebase.min.js"></script> -->
+        <script type="module" src="assets/js/login.min.js"></script>
+        <script type="module" src="assets/js/logout.min.js"></script>
+        <script type="module" src="assets/js/registrodoador.min.js?v=1.0.0"></script>
+    </body>
+</html>

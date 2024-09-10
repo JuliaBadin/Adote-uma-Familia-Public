@@ -1,0 +1,97 @@
+<body>  
+  <!-- ======= Navbar ======= -->
+  <header id="header" class="header" style="background-color: rgb(0, 120, 110, 0.8)">
+    <div class="container-header" id="navbar-template">
+        <a href="/" class="logo">
+            <img src="assets/img/logo/1_auf_logo_flat_white.png" alt="logo" class="img-logo">
+          </a>
+          <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/sobre-nos">Sobre nós</a></li>
+            <li id="navbar-profile" class="active"><a href="#">Meu perfil</a></li>
+            <li id="navbar-logout"><a href="#">Sair</a></li>      
+          </ul>
+          </nav>
+    </div>
+    <i class="mobile-nav-toggle mobile-nav-show ri-menu-line" onclick="toggleMobileNav()"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none ri-close-fill" onclick="toggleMobileNav()"></i>
+  </header>
+
+  <section class="profile-section">
+    <div class="container-profile">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="profile-about">
+                  <p id="user-name"></p>
+                  <div class="row infos-list">
+                        <div class="col-lg">
+                            <div class="infos">
+                                <label>Cidade</label>
+                                <p id="city"></p>
+                            </div>
+                            <div class="infos">
+                                <label>E-mail</label>
+                                <p id="email"></p>
+                            </div>
+                            <div class="infos">
+                                <label>Telefone</label>
+                                <p id="phone"></p>
+                            </div>
+                            <div class="infos">
+                                <label>Famílias cadastradas</label>
+                                <p id="numfamilies"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="user-photo">
+                  <img src="assets/img/default-user.png" id="user-photo">
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+
+    <div class="col-sm-4 container-search">
+      <form id="search-family-form">
+        <label>Pesquisar se família está cadastrada</label>
+        <div class="input-group">
+          <input id="search-family-input" class="form-search" type="search" placeholder="Pesquisar por email ou telefone" aria-label="Search">
+          <div class="submit-search">
+            <button type="button" class="submit-search-icon"><i class="ri-search-line" name="" value=""></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer-template" class="footer">
+    <div class="footer-content">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-8 col-md-12 footer-info">
+              <a href="/" class="logo d-flex align-items-center">
+                <img src="assets/img/logo/1_auf_logo_flat.png" alt="logo">
+              </a>
+              <p>Nosso compromisso é conectar quem precisa de ajuda a quem quer ajudar, criando uma rede de solidariedade para reconstruir vidas e comunidades.</p>
+            </div>
+
+            <div class="col-lg-4 col-6 footer-links">
+              <h4>Links úteis</h4>
+              <ul>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.linkedin.com/company/adote-uma-fam%C3%ADlia/about/" target="_blank">Linkedin</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="/termos">Termos e Condições</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <a href="#" class="scroll-top"><i class="ri-arrow-up-line"></i></a>
+</body>

@@ -1,0 +1,228 @@
+/*--------------------------------------------------------------
+  # Modais
+  --------------------------------------------------------------*/
+
+#fundo-modal-login,
+#fundo-modal-cadastro-familia,
+#fundo-modal-cadastro-doador,
+#fundo-modal-selecionar-cadastro,
+#fundo-modal-contato-ong,
+#fundo-modal-redefinir-senha,
+#fundo-modal-nova-senha {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 100000; /* Ensure it's on top of other elements */
+  transition: 400ms;
+}
+
+#fundo-modal-login.hide,
+#fundo-modal-cadastro-doador.hide,
+#fundo-modal-cadastro-familia.hide,
+#fundo-modal-selecionar-cadastro.hide,
+#fundo-modal-contato-ong.hide,
+#fundo-modal-redefinir-senha.hide,
+#fundo-modal-nova-senha.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #00e5a2;
+  max-width: 40%;
+  max-height: 60%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  z-index: 100001; /* Ensure it's on top of its background */
+}
+
+.modal#modal-cadastro-doador,
+.modal#modal-cadastro-familia {
+  max-width: 40%;
+  min-height: 70%;
+  max-height: 90%;
+}
+
+.ri-close-fill {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 99999;
+}
+
+
+  /*--------------------------------------------------------------
+  # Forms
+  --------------------------------------------------------------*/
+
+.modal form {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    width: 100%;
+}
+
+.modal label {
+    padding-top: 15px;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+#content {
+    width: 90%;
+    height: 90%;
+    align-content: center;
+}
+
+#content h2 {
+  text-align: center;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #6b6b6b;
+    background-color: rgba(250, 180, 41, 0.1);
+}
+
+.modal input:focus,
+select:focus,
+textarea:focus {
+    border-bottom: 2px solid #00e5a2;
+}
+
+#submit-login,
+#submit-sign-up-family,
+#submit-sign-up-donor,
+#submit-redefinir-senha,
+#update-password {
+  background: var(--color-primary);
+  color: #fff;
+  float: left;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px 40px 7px;
+  padding: 12px;
+  width: 45%;
+  font-size: 16px;
+}
+
+#submit-login:hover,
+#submit-sign-up-family:hover,
+#submit-sign-up-donor:hover,
+#submit-redefinir-senha:hover,
+.modal .button:hover,
+#update-password:hover {
+  background: var(--color-secondary);
+}
+
+#submit-redefinir-senha,
+#update-password {
+  float: none;
+}
+#submit-sign-up-family {
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+#cadastrar-login {
+  text-decoration: none;
+  width: 30px;
+  color: #fff;
+}
+
+.modal .button {
+  background: #00e5a2;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px 40px 7px;
+  width: 45%;
+  padding: 12px;
+  font-size: 16px;
+  float: right;
+}
+
+form h6 {
+    margin: 25px 0 1px;
+    color: #6b6b6b;
+    text-decoration: underline #00e5a2;
+    font-weight: 400;
+}
+
+form h6:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox input {
+ margin-top: 0.7em;
+}
+.checkbox label {
+  margin-left: 0.5em;
+  flex: 0 0 90%;
+  word-break: break-word;
+  vertical-align: middle;
+}
+
+#description {
+  font-size: 18px;
+  background: transparent;
+  cursor: default;
+
+  width: 100%;
+  resize: vertical;
+  padding: 8px;
+  text-align: justify;  
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem; 
+  display: block;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    min-width: 90%;
+    min-height: 90% !important;
+  }
+  .modal form {
+    padding-bottom: 100px;
+  }
+  .modal-login {
+    min-width: 90%;
+    min-height: 50% !important;
+  }
+}

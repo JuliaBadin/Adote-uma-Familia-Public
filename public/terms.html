@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote uma Família | Termos de Serviço</title>
+    <link rel="shortcut icon" href="assets/img/logo/1_auf_icon_flat.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/modais.css">
+    <link rel="stylesheet" href="assets/css/terms.css">
+</head>
+<body>
+  <!-- ======= Navbar ======= -->
+  <header id="header" class="header" style="background-color: rgb(0, 120, 110, 0.8)">
+      <div class="container-header" id="navbar-template">
+          <a href="/" class="logo">
+              <img src="assets/img/logo/1_auf_logo_flat_white.png" alt="logo" class="img-logo">
+            </a>
+            <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="/">Início</a></li>
+              <li><a href="/sobre-nos">Sobre nós</a></li>
+              <li id="navbar-profile" class="d-none"><a href="#" id="profile-link">Meu perfil</a></li>
+              <li id="navbar-sign-up-donor"><a href="#" onclick="cadastroDoadorModal();">Quero ser doador</a></li>
+              <li id="navbar-sign-up-family"><a href="/sobre-nos">Quero receber ajuda</a></li>
+              <li id="navbar-sign-up-ong"><a href="#" onclick="ongModal();">Sou uma ONG</a></li>
+              <li id="navbar-login"><a href="#" onclick="loginModal();">Entrar</a></li>
+              <li id="navbar-logout" class="d-none"><a href="#">Sair</a></li>    
+            </ul>
+            </nav>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show ri-menu-line"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none ri-close-fill"></i>
+  </header>
+
+
+  <main>
+      <h1>Termos e Condições</h1>
+
+      <h5>1. Aceitação dos Termos</h5>
+
+      <p style="font-size: large;">AO USAR OS SERVIÇOS, VOCÊ RECONHECE EXPRESSAMENTE QUE LEU E COMPREENDEU TODOS ESTES TERMOS DE SERVIÇO.</p>
+
+      <h5>2. Modificações nos Termos</h5>
+
+      <p>Reservamo-nos o direito, a nosso exclusivo critério, de alterar ou modificar partes destes Termos de Serviço a qualquer momento. Sempre que possível, forneceremos um aviso com 30 dias de antecedência sobre alterações substanciais a estes Termos de Serviço e, se apropriado, poderemos informar os usuários sobre tais alterações por e-mail ou outros meios apropriados. As alterações podem ser feitas com pouco ou nenhum aviso quando uma alteração for exigida por lei. Quando fizermos uma alteração, publicaremos os Termos de Serviço revisados ​​nesta página e indicaremos a data de tal revisão.</p>
+
+      <h5>3. Natureza do Serviço</h5>
+
+      <p>AdoteUmaFamilia não é um processador de pagamentos e não retém quaisquer fundos. Em vez disso, AdoteUmaFamilia apenas facilita a conexão e comunicação entre Beneficiários e Doadores, que escolherão realizar doações externas à plataforma AdoteUmaFamilia. AdoteUmaFamilia é um aplicativo sem fins lucrativos.</p>
+
+      <h5>4. Consentimento para Tratamento de Dados Pessoais</h5>
+
+      <p>Ao utilizar os serviços, você reconhece e consente expressamente que está fornecendo dados pessoais e autoriza o tratamento desses dados conforme previsto na Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018). Isso inclui, mas não se limita a, a coleta, armazenamento, uso e compartilhamento dos seus dados com terceiros para as finalidades descritas nestes Termos de Serviço.</p>
+
+      <h5>5. Responsabilidade sobre Informações de Terceiros</h5>
+
+      <p>Todas as informações e conteúdos de terceiros hospedados por nós são apenas para fins informativos, e AdoteUmaFamilia não garante a precisão, integridade, atualidade ou confiabilidade de tais informações ou conteúdos. Antes de tomar qualquer decisão sobre qualquer arrecadação de fundos, instituição de caridade, doações, doadores ou qualquer informação ou conteúdo relacionado aos serviços, você deve consultar seu consultor financeiro, jurídico, fiscal ou outro consultor profissional, conforme apropriado. Você reconhece que todas as informações e conteúdos acessados ​​por você usando os Serviços são por sua conta e risco.</p>
+
+      <h5>6. Limitação de Responsabilidade</h5>
+
+      <p>AdoteUmaFamilia não tem controle sobre a conduta ou qualquer informação fornecida por um Usuário e, por meio deste documento, isenta-se de qualquer responsabilidade a esse respeito em toda a extensão permitida pela lei aplicável. Não garantimos que uma campanha de arrecadação de fundos obterá uma determinada quantia de doações ou quaisquer doações. Não endossamos nenhuma arrecadação de fundos, usuário ou causa e não oferecemos nenhuma garantia, expressa ou implícita, de que qualquer informação fornecida por meio dos serviços seja precisa. Nós nos isentamos expressamente de qualquer responsabilidade pelo resultado ou sucesso de qualquer campanha de arrecadação de fundos. Você, como Doador, deve tomar a decisão final quanto ao valor e à adequação de contribuir para qualquer Usuário ou Campanha de Arrecadação de Fundos.</p>
+
+      <h5>7. Doações</h5>
+
+      <p>Doadores: Todas as doações são por sua conta e risco. Quando você faz uma Doação por meio da plataforma, é sua responsabilidade entender como seu dinheiro será usado e verificar regularmente o conteúdo da Campanha de Arrecadação de Fundos para ver se há atualizações. AdoteUmaFamilia não é responsável por quaisquer ofertas, promessas, recompensas ou Promoções feitas ou oferecidas por Usuários ou Angariadores de Fundos; tal conduta viola estes Termos de Serviço. Não verificamos e não podemos verificar as informações fornecidas pelos Usuários ou Arrecadadores de Fundos, nem representamos ou garantimos que as Doações serão usadas de acordo com qualquer finalidade de arrecadação de fundos prescrita por um Usuário ou Arrecadação de Fundos ou de acordo com as leis aplicáveis.</p>
+
+      <h5>8. Cadastro de Beneficiários</h5>
+
+      <p>Para ser um beneficiário é necessário entrar em contato com uma das ONGs parceiras para realizar o cadastro, esse processo garante uma segurança melhor para todos os usuários.        </p>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer-template" class="footer">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-8 col-md-12 footer-info">
+            <a href="/" class="logo d-flex align-items-center">
+              <img src="assets/img/logo/1_auf_logo_flat.png" alt="logo">
+            </a>
+            <p>Nosso compromisso é conectar quem precisa de ajuda a quem quer ajudar, criando uma rede de solidariedade para reconstruir vidas e comunidades.</p>
+          </div>
+  
+          <div class="col-lg-4 col-6 footer-links">
+            <h4>Links úteis</h4>
+            <ul>
+              <li><i class="ri-subtract-fill"></i> <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a></li>
+              <li><i class="ri-subtract-fill"></i> <a href="https://www.linkedin.com/company/adote-uma-fam%C3%ADlia/about/" target="_blank">Linkedin</a></li>
+              <li><i class="ri-subtract-fill"></i> <a href="/termos">Termos e Condições</a></li>
+            </ul>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="scroll-top"><i class="ri-arrow-up-line"></i></a>
+
+
+  <!-- ======= Modais ======= -->
+
+  <!-- MODAL ONG -->
+  <div id="fundo-modal-contato-ong" class="hide">
+    <div class="modal">
+      <div id="content" style="text-align:center">
+          <h2>Como se tornar uma ONG parceira</h2>
+          <br><br><br>
+          <i class="ri-close-fill" onclick="ongModal();"></i>
+          <p>Entre em contato conosco através do nosso <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a> ou pelo email <a href="mailto:adoteumafamilia2024@gmail.com">adoteumafamilia2024@gmail.com</a></p>
+      </div>
+    </div>
+  </div> 
+  
+  <!-- LOGIN -->
+  <div id="fundo-modal-login" class="hide">
+    <div class="modal modal-login">
+      <div id="content">
+          
+        <h2>Entrar</h2>
+        <i class="ri-close-fill" onclick="loginModal();"></i>
+
+        <form action="" method="post" id="form-login">
+        <input type="hidden" name="acao" value="login">
+        <div class="input-form">
+            <label for="email-login">Email</label>
+            <input name="email" id="email-login" type="email" placeholder="seu@email.com" required="required">
+            <span class="error-message" id="email-error-login"></span>
+        </div>
+
+        <div class="input-form">
+            <label for="password-login">Senha</label>
+            <input name="password" id="password-login" type="password" placeholder="********" required="required">
+            <span class="error-message" id="password-error-login"></span>
+        </div>
+
+        <h6><a target="_blank" onclick="redefinirSenhaModal()">Esqueci minha senha</a></h6><br>
+
+        <input type="submit" id="submit-login" name="entrar" value="Entrar">
+
+        <button class="button" onclick="loginModal(); selecionarCadastroModal();">
+            <a id="cadastrar-login">Novo por aqui?</a>
+        </button>
+
+        </form>
+      </div>
+    </div> 
+  </div> 
+  
+  <!-- REDEFINIR SENHA -->
+  <div id="fundo-modal-redefinir-senha" class="hide">
+      <div class="modal modal-login">
+        <div id="content" style="text-align:center">
+            <h2>Esqueci minha senha</h2><br>
+            <i class="ri-close-fill" onclick="redefinirSenhaModal();"></i>
+            <p>Informe seu e-mail cadastrado que enviaremos as instruções para você redefinir a sua senha.</p><br>
+            <input class="form-search" type="search" placeholder="E-mail" aria-label="Search"><br><br>
+            <input type="submit" name="email" id="submit-redefinir-senha" onclick="redefinirSenhaModal();" value="Redefinir senha" required="required">
+        </div>
+      </div>
+  </div> 
+  
+  <!-- CADASTRO DOADOR -->
+  <div id="fundo-modal-cadastro-doador" class="hide">
+    <div class="modal" id="modal-cadastro-doador">
+      <div id="content">
+        <h2>Cadastrar-se como Doador</h2>
+        <i class="ri-close-fill" onclick="cadastroDoadorModal();"></i>
+
+        <form action="" method="post" enctype="multipart/form-data" id="form-sign-up-donor">
+
+            <input type="hidden" name="acao" value="cadastrar">
+
+            <div class="input-form">
+                <label for="name-sign-up-donor">Seu nome completo</label>
+                <input name="name" id="name-sign-up-donor" type="text" placeholder="João da Silva" required>
+                <span class="error-message" id="field-0-error"></span>
+              </div>
+
+            <div class="input-form">
+                <label for="email-sign-up-donor">Email</label>
+                <input name="email" id="email-sign-up-donor" type="email" placeholder="seu@email.com" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="input-form">
+                <label for="password-sign-up-donor">Senha</label>
+                <input name="password" id="password-sign-up-donor" type="password" placeholder="********" required>
+                <span class="error-message" id="password-error"></span>
+              </div>
+
+            <div class="input-form">
+              <label for="phone-sign-up-donor">Telefone</label>
+              <input name="phone" id="phone-sign-up-donor" type="tel" placeholder="Formato: 51 99999 9999" required>
+              <span class="error-message" id="phone-error"></span>
+            </div>
+
+            <div class="input-form">
+              <label for="photo-sign-up-donor">Foto (opcional)</label>
+              <input type="file" id="photo-sign-up-donor" name="photo" accept="image/png, image/jpeg">
+            </div>
+
+            <div class="input-form">
+              <label for="city">Cidade para onde deseja doar (opcional)</label>
+              <select id="city" name="city"placeholder="Cidade de preferência">
+                <option value="">Selecione uma cidade</option>
+              </select>
+           </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="terms-checkbox" required>
+              <label for="terms-checkbox">Ao criar minha conta, eu aceito os <a href="/termos" target="_blank">Termos de Uso</a></label>
+            </div><br>
+
+            <input type="submit" id="submit-sign-up-donor" name="cadastrar" value="Cadastrar-se">
+
+            <button class="button" onclick="cadastroDoadorModal(); loginModal();">
+              <a id="cadastrar-login">Já tenho uma conta</a>
+            </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+   <!-- TIPO DE CADASTRO -->
+   <div id="fundo-modal-selecionar-cadastro" class="hide">
+    <div class="modal modal-login">
+      <div id="content" style="text-align:center">
+        <br><h2>Desejo me cadastrar como</h2>
+        <i class="ri-close-fill" onclick="selecionarCadastroModal();"></i>
+        <br><br><button class="button" onclick="cadastroDoadorModal(); selecionarCadastroModal();"><a href="#" id="cadastrar-login">Doador</a></button>
+        <button class="button" onclick="selecionarCadastroModal();" style="float: left;"><a href="/sobre-nos" id="cadastrar-login">Família</a></button>
+      </div>
+    </div>
+  </div> 
+  <!-- End Modais -->
+
+  <!-- <script type="module" src="assets/js/inicializacaofirebase.min.js"></script> -->
+  <script type="module" src="assets/js/login.min.js"></script>
+  <script type="module" src="assets/js/logout.min.js"></script>
+  <script type="module" src="assets/js/registrodoador.min.js?v=1.0.0"></script>
+
+  <script src="assets/js/main.min.js?v=1.0.0"></script>
+</body>
+</html>

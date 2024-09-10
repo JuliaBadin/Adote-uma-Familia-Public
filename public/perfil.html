@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote uma Família | Meu perfil</title>
+    <link rel="shortcut icon" href="assets/img/logo/1_auf_icon_flat.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/modais.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+    <style>
+        body {
+        display: none;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id="profile-content"></div>
+
+        <script type="module">
+            import { auth, firebaseInitialized } from './assets/js/inicializacaofirebase.min.js';
+            import { getUserType } from './assets/js/usertype.min.js';
+
+            async function loadProfileContent() {
+                try {
+                    await firebaseInitialized;
+                    const userType = getUserType();
+                    
+                    if(!userType){
+                        alert('Faça login para acessar essa página');
+                        window.location.href = '/inicio';
+                    }
+
+                    let profileContent = '';
+                    let profileScripts = [];
+
+                    switch(userType) {
+                    case 'usersFamily':
+                        profileContent = 'profile-family.html';
+                        profileScripts = [
+                            'assets/js/infosperfilfamilia.min.js?v=1.0.0',
+                            'assets/js/modificarperfilfamilia.min.js?v=1.0.0',
+                            'assets/js/logout.min.js',
+                        ];
+                        break;
+                    case 'usersDonors':
+                        profileContent = 'profile-donor.html';
+                        profileScripts = [
+                            'assets/js/infosperfildoador.min.js?v=1.0.0',
+                            'assets/js/modificarperfildoador.min.js?v=1.0.0',
+                            'assets/js/algoritmo.min.js',
+                            'assets/js/logout.min.js',
+                        ];
+                        break;
+                    case 'usersONG':
+                        profileContent = 'profile-ong.html';
+                        profileScripts = [
+                            'assets/js/infosperfilong.min.js?v=1.0.0',
+                            'assets/js/logout.min.js',
+                        ];
+                        break;
+                    default:
+                        alert('Faça login para acessar essa página');
+                    }
+
+                    // Carrega o HTML de cada tipo de usuário
+                    const response = await fetch(profileContent);
+                    const htmlContent = await response.text();
+                    document.getElementById('profile-content').innerHTML = htmlContent;
+
+                    // Carrega os scripts específicos de cada usuário
+                    for (const scriptUrl of profileScripts) {
+                        const script = document.createElement('script');
+                        script.src = scriptUrl;
+                        script.type = 'module';
+                        document.body.appendChild(script);
+                    }
+
+                    // Carrega o script main.js como um script normal
+                    const mainScript = document.createElement('script');
+                    mainScript.src = 'assets/js/main.min.js?v=1.0.0';
+                    mainScript.onload = () => {
+                    };
+                    document.body.appendChild(mainScript);
+
+                    document.body.style.display = 'block';
+                } catch (error) {
+                    window.location.href = '/inicio';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', async () => {
+                const isFirstLoad = localStorage.getItem('firstLoad');
+
+                if (isFirstLoad == "false") {
+                    await loadProfileContent();
+                    localStorage.setItem('firstLoad', 'true');
+                    location.reload(); // Garante que as infos vão ser carregadas
+                } else {
+                    await loadProfileContent();
+                }
+            });
+
+        </script>
+    </body>
+</html>

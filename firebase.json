@@ -1,0 +1,35 @@
+{
+  "hosting": {
+    "public": "public",
+    
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/inicio",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/sobre-nos",
+        "destination": "/sobre-nos.html"
+      },
+      {
+        "source": "/termos",
+        "destination": "/terms.html"
+      },
+      {
+        "source": "/perfil",
+        "destination": "/perfil.html"
+      }
+    ],
+    "redirects":[
+      {
+        "source": "/cadastro",
+        "destination": "/cadastro.html",
+        "type": 302
+      }
+    ]
+  }
+}

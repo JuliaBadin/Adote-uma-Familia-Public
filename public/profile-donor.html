@@ -1,0 +1,115 @@
+<body>
+  <!-- ======= Navbar ======= -->
+  <header id="header" class="header" style="background-color: rgb(0, 120, 110, 0.8)">
+    <div class="container-header" id="navbar-template">
+        <a href="/" class="logo">
+            <img src="assets/img/logo/1_auf_logo_flat_white.png" alt="logo" class="img-logo">
+          </a>
+          <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/sobre-nos">Sobre nós</a></li>
+            <li id="navbar-profile" class="active"><a href="#">Meu perfil</a></li>
+            <li id="navbar-login" class="d-none"><a href="#" onclick="loginModal();">Entrar</a></li>
+            <li id="navbar-logout"><a href="#">Sair</a></li>  
+          </ul>
+          </nav>
+    </div>
+    <i class="mobile-nav-toggle mobile-nav-show ri-menu-line" onclick="toggleMobileNav()"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none ri-close-fill"  onclick="toggleMobileNav()"></i>
+  </header>
+
+  <section class="profile-section">
+    <!-- INFOS DO USUÁRIO -->   
+    <div class="container-profile">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="profile-about">
+                <input type="text" id="user-name" class="editable" placeholder="" disabled>
+                <div class="row infos-list">
+                    <div class="col-lg">
+                        <div class="infos">
+                            <label>Cidade para doar</label>
+                            <select id="city" name="city" required class="editable" placeholder="" disabled>
+                              <option value="">Selecione uma cidade</option>
+                            </select>
+                          </div>
+                        <div class="infos">
+                            <label>E-mail</label>
+                            <p id="email"></p>
+                        </div>
+                        <div class="infos">
+                            <label>Telefone</label>
+                            <input type="text" id="phone" class="editable" placeholder="" disabled>
+                        </div>
+                        <span class="error-message" id="phone-error"></span>
+                        <div>
+                            <button id="edit-button" class="btn">Atualizar perfil</button>
+                            <button id="save-button" class="btn" style="display: none;">Salvar</button>
+                        </div>
+                        <div>
+                            <button class="btn" onclick="listaFamiliasModal()" id="load-families">Adicionar nova família</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="user-photo">
+                <img src="assets/img/default-user.png" id="user-photo">
+                <button class="btn btn-message d-none" id="photo-upload-button"><input type="file" accept="image/png, image/jpeg" id="photo-upload" class="editable" placeholder="Atualizar foto" disabled></button>
+            </div>
+        </div>
+    </div>
+  </section> <!-- End Profile Section -->
+
+  <section class="profiles-list-section">
+    <h3>Lista de famílias</h3><br>
+
+    <!-- Selected Families -->
+    <div class="container-families">
+        <div class="row" id="connected-family-list"> <!-- algoritmo insere lista dinâmica aqui -->
+        </div>
+    </div> <!-- End Selected Families -->
+
+
+  <!-- Modal Families -->
+    <div class="profiles-list fundo-modal-familias hide">
+        <div class="container-families modal-profile">
+            <i class="ri-close-fill close-modal" style="right: 10%;" onclick="listaFamiliasModal()"></i>
+            <div class="row" id="select-families-list"></div> <!-- algoritmo insere lista dinâmica aqui -->
+            <div class="row" style="margin-top: -30px;">
+                <button class="btn btn-message col-lg-2 col-md-2 col-sm-2" id="reload-families"><i class="ri-restart-line"></i> Atualizar</button>
+            </div>
+        </div> <!-- End Modal -->
+    </div>
+  </section> <!-- End Profiles List -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer-template" class="footer">
+    <div class="footer-content">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-8 col-md-12 footer-info">
+              <a href="/" class="logo d-flex align-items-center">
+                <img src="assets/img/logo/1_auf_logo_flat.png" alt="logo">
+              </a>
+              <p>Nosso compromisso é conectar quem precisa de ajuda a quem quer ajudar, criando uma rede de solidariedade para reconstruir vidas e comunidades.</p>
+            </div>
+
+            <div class="col-lg-4 col-6 footer-links">
+              <h4>Links úteis</h4>
+              <ul>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.linkedin.com/company/adote-uma-fam%C3%ADlia/about/" target="_blank">Linkedin</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="/termos">Termos e Condições</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <a href="#" class="scroll-top"><i class="ri-arrow-up-line"></i></a>
+</body>

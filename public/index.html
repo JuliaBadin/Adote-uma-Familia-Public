@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote Uma Familia | Início</title>
+    <link rel="shortcut icon" href="assets/img/logo/1_auf_icon_flat.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/modais.css">
+  </head>
+
+  <body class="page-index vsc-initialized">
+    
+    <!-- ======= Navbar ======= -->
+    <header id="header" class="header">
+      <div class="container-header" id="navbar-template">
+        <a href="/" class="logo">
+          <img src="assets/img/logo/1_auf_logo_flat_white.png" alt="logo" class="img-logo">
+        </a>
+        <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/" class="active">Início</a></li>
+          <li><a href="/sobre-nos">Sobre nós</a></li>
+          <li id="navbar-profile" class="d-none"><a href="#" id="profile-link" onclick="">Meu perfil</a></li>
+          <li id="navbar-sign-up-donor"><a href="#" onclick="cadastroDoadorModal();">Quero ser doador</a></li>
+          <li id="navbar-sign-up-family"><a href="/sobre-nos" onclick="">Quero receber ajuda</a></li>
+          <li id="navbar-sign-up-ong"><a href="#" onclick="ongModal();">Sou uma ONG</a></li>
+          <li id="navbar-login"><a href="#" onclick="loginModal();">Entrar</a></li>
+          <li id="navbar-logout" class="d-none"><a href="#" onclick="logout()">Sair</a></li>        
+        </ul>
+        </nav>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show ri-menu-line" onclick=""></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none ri-close-fill" onclick=""></i>
+    </header>
+
+    <main id="main">
+
+      <!-- ======= Main Section ======= -->
+      <section class="main-section">
+        <div class="container-main">
+          <div class="row">
+            <div class="col-xl-4">
+              <h2 data-aos="fade-up">O Rio Grande do Sul precisa da sua ajuda!</h2>
+              <blockquote data-aos="fade-up" data-aos-delay="100">
+                <p>Devido às enchentes, milhares de famílias perderam tudo. A sua doação pode fazer a diferença na vida de alguém.</p>
+              </blockquote>
+              <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn-signup-donor" onclick="cadastroDoadorModal();">Quero ajudar</a>
+                <a href="#call-to-action" class="btn-signup-family">Quero receber ajuda</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Main Section -->
+
+      <!-- ======= Infos Section ======= -->
+      <section class="infos">
+
+        <div class="container-infos" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+              <div class="section-header">
+                <h2>Últimas informações</h2>
+              </div>
+
+              <div class="row gy-4">
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-building-line" style="color: #ffbb2c;"></i>
+                    <span>Municípios afetados: 478 (de 497)</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-team-line" style="color: #5578ff;"></i>
+                    <span>Pessoas afetadas: 2.398.255</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-home-2-line" style="color: #00e5a2;"></i>
+                    <span>Pessoas desalojadas: 422.753</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-group-line" style="color: #e361ff;"></i>
+                    <span>Pessoas em abrigos: 16.128</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-lifebuoy-fill" style="color: #e80368;"></i>
+                    <span>Pessoas resgatadas: 77.874</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-md-4">
+                  <div class="icon-list d-flex">
+                    <i class="ri-money-dollar-circle-line" style="color: #e80368;"></i>
+                    <span>Prejuízo estimado: R$ 8,9 bilhões</span>
+                  </div>
+                </div><!-- End Icon List Item-->
+
+                <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="200"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Infos Section -->
+
+
+      <!-- ======= Photos Section ======= -->
+      <section class="photos">
+        <div class="container-photos" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>O que está acontecendo</h2>
+          </div>
+
+          <div class="row" data-aos-delay="200">
+            <div class="col-xl-5 img-bg">
+              <p>As enchentes no Rio Grande do Sul em 2024, provocadas por chuvas extremas entre o final de abril e início de maio, afetaram severamente a vida de milhões de pessoas, deixando 175 mortos e desalojando quase 500 mil moradores. Mais de 640 mil residências ficaram sem água e 440 mil sem energia elétrica, enquanto deslizamentos e alagamentos bloquearam estradas, dificultando o resgate.</p>
+              <p>O estado de calamidade pública foi decretado em 5 de maio, após a inundação dos rios atingirem níveis históricos, chegando a mais de 30 metros em algumas cidades.  A crise também impactou significativamente a saúde pública, deixando mais de 3 mil instalações de saúde inoperantes, e mobilizou uma resposta intensa de resgate e assistência, envolvendo diversos órgãos e voluntários para ajudar tanto pessoas quanto animais.</p></div>
+            <div class="col-xl-7 slides">
+              <div class="slides-animation swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" style="background-image: url(assets/img/enchente-1.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(assets/img/enchente-2.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(assets/img/enchente-3.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(assets/img/enchente-4.jpg);"></div>
+                  <div class="swiper-slide" style="background-image: url(assets/img/enchente-5.jpg);"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper-button-prev"><i class="ri-arrow-left-wide-line"></i></div>
+              <div class="swiper-button-next"><i class="ri-arrow-right-wide-line"></i></div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Photos Section -->
+
+
+      <!-- ======= Call To Action Section ======= -->
+      <section class="call-to-action" id="call-to-action">
+          <!-- Doador Section -->
+          <div class="row">
+            <div class="col-lg-12">
+                <h3>Doadores</h3>
+                <p>Quer ajudar? Crie sua conta e verifique seu email pelo link que nossa equipe enviará. Com a conta confirmada, você poderá escolher uma família para ajudar. Três opções serão apresentadas com foto, descrição e cidade, escolha uma das três ou peça mais opções. A família escolhida ficará na sua lista pessoal, permitindo contato por email ou telefone. A comunicação será feita diretamente entre você e a família, nosso site apenas facilita a conexão.</p>
+                <a class="btn-cta" href="#" onclick="cadastroDoadorModal();">Criar conta</a>
+            </div>
+        </div><br><br>
+
+        <!-- Familia Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Famílias</h3>
+                <p>Quer se cadastrar para receber ajuda? Entre em contato com uma de nossas <a href="/sobre-nos">ONGs parceiras</a>. Cada ONG tem um link personalizado que permite o cadastro seguro das famílias afetadas pelas enchentes. Após criar sua conta, verifique seu email pelo link enviado pela nossa equipe. Com a conta confirmada, você verá os doadores que escolheram te ajudar e poderá contatá-los por email ou telefone. A comunicação será feita diretamente entre você e o doador, nosso site apenas facilita a conexão.</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="cta-login">
+        <div class="container-cta-login" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Já é cadastrado?</h4>
+              <p>Entre na sua conta por aqui.</p>
+              <a href="#" class="btn-cta" onclick="loginModal();">Entrar</a>
+            </div>
+            <div class="col-md-6">
+              <h4>Quer ser uma ONG parceira?</h4>
+              <p>Veja como entrar em contato!</p>
+              <a href="#" class="btn-cta" onclick="ongModal();">Entrar em contato</a>
+            </div>
+          </div>
+        </div>
+      </section> <!-- End Call To Action Section -->
+
+    </main><!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer-template" class="footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-8 col-md-12 footer-info">
+              <a href="/" class="logo d-flex align-items-center">
+                <img src="assets/img/logo/1_auf_logo_flat.png" alt="logo">
+              </a>
+              <p>Nosso compromisso é conectar quem precisa de ajuda a quem quer ajudar, criando uma rede de solidariedade para reconstruir vidas e comunidades.</p>
+            </div>
+  
+            <div class="col-lg-4 col-6 footer-links">
+              <h4>Links úteis</h4>
+              <ul>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="https://www.linkedin.com/company/adote-uma-fam%C3%ADlia/about/" target="_blank">Linkedin</a></li>
+                <li><i class="ri-subtract-fill"></i> <a href="/termos">Termos e Condições</a></li>
+              </ul>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="scroll-top"><i class="ri-arrow-up-line"></i></a>
+
+    <!-- ======= Modais ======= -->
+    
+    <!-- MODAL ONG -->
+    <div id="fundo-modal-contato-ong" class="hide">
+      <div class="modal modal-login">
+        <div id="content" style="text-align:center">
+          <h2>Como se tornar uma ONG parceira</h2>
+          <br><br><br>
+          <i class="ri-close-fill" onclick="ongModal();"></i>
+          <p>Entre em contato conosco através do nosso <a href="https://www.instagram.com/adoteumafamilia_" target="_blank">Instagram</a> ou pelo email <a href="mailto:adoteumafamilia2024@gmail.com">adoteumafamilia2024@gmail.com</a></p>
+        </div>
+      </div>
+    </div> 
+
+    <!-- LOGIN -->
+    <div id="fundo-modal-login" class="hide">
+      <div class="modal modal-login">
+        <div id="content">
+          
+          <h2>Entrar</h2>
+          <i class="ri-close-fill" onclick="loginModal();"></i>
+
+          <form action="" method="post" id="form-login">
+            <input type="hidden" name="acao" value="login">
+            <div class="input-form">
+              <label for="email-login">Email</label>
+              <input name="email" id="email-login" type="email" placeholder="seu@email.com" required>
+              <span class="error-message" id="email-error-login"></span>
+            </div>
+
+            <div class="input-form">
+              <label for="password-login">Senha</label>
+              <input name="password" id="password-login" type="password" placeholder="********" required>
+              <span class="error-message" id="password-error-login"></span>
+            </div>
+
+            <h6><a target="_blank" onclick="redefinirSenhaModal()">Esqueci minha senha</a></h6><br>
+
+            <input type="submit" id="submit-login" name="entrar" value="Entrar">
+
+            <button class="button" onclick="loginModal(); selecionarCadastroModal();">
+              <a id="cadastrar-login">Novo por aqui?</a>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div> 
+
+    <!-- REDEFINIR SENHA -->
+    <div id="fundo-modal-redefinir-senha" class="hide">
+      <div class="modal modal-login">
+        <div id="content" style="text-align:center">
+          <h2>Esqueci minha senha</h2><br>
+          <i class="ri-close-fill" onclick="redefinirSenhaModal();"></i>
+          <p>Informe seu e-mail cadastrado que enviaremos as instruções para você redefinir a sua senha.</p><br>
+          <input id="reset-password" class="form-search" type="search" placeholder="E-mail" aria-label="Search"><br><br>
+          <button id="submit-redefinir-senha" onclick="redefinirSenhaModal();">Redefinir Senha</button>
+        </div>
+      </div>
+    </div> 
+
+    <!-- CADASTRO DOADOR -->
+    <div id="fundo-modal-cadastro-doador" class="hide">
+      <div class="modal" id="modal-cadastro-doador">
+        <div id="content">
+          <h2>Cadastrar-se como Doador</h2>
+          <i class="ri-close-fill" onclick="cadastroDoadorModal();"></i>
+
+          <form action="" method="post" enctype="multipart/form-data" id="form-sign-up-donor">
+
+              <input type="hidden" name="acao" value="cadastrar">
+
+              <div class="input-form">
+                  <label for="name-sign-up-donor">Seu nome completo</label>
+                  <input name="name" id="name-sign-up-donor" type="text" placeholder="João da Silva" required>
+                  <span class="error-message" id="field-0-error"></span>
+                </div>
+
+              <div class="input-form">
+                  <label for="email-sign-up-donor">Email</label>
+                  <input name="email" id="email-sign-up-donor" type="email" placeholder="seu@email.com" required>
+                  <span class="error-message" id="email-error"></span>
+              </div>
+
+              <div class="input-form">
+                <label for="password-sign-up-donor">Senha</label>
+                <input name="password" id="password-sign-up-donor" type="password" placeholder="********" required>
+                <span class="error-message" id="password-error"></span>
+              </div>
+
+              <div class="input-form">
+                <label for="phone-sign-up-donor">Telefone</label>
+                <input name="phone" id="phone-sign-up-donor" type="tel" placeholder="Formato: 51 99999 9999" required>
+                <span class="error-message" id="phone-error"></span>
+              </div>
+
+              <div class="input-form">
+                <label for="photo-sign-up-donor">Foto (opcional)</label>
+                <input type="file" id="photo-sign-up-donor" name="photo" accept="image/png, image/jpeg">
+              </div>
+
+              <div class="input-form">
+                <label for="city">Cidade para onde deseja doar (opcional)</label>
+                <select id="city" name="city"placeholder="Cidade de preferência">
+                  <option value="">Selecione uma cidade</option>
+                </select>
+             </div>
+
+              <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="terms-checkbox" required>
+                <label for="terms-checkbox">Ao criar minha conta, eu aceito os <a href="/termos" target="_blank">Termos de Uso</a></label>
+              </div><br>
+
+              <input type="submit" id="submit-sign-up-donor" name="cadastrar" value="Cadastrar-se">
+
+              <button class="button" onclick="cadastroDoadorModal(); loginModal();" style="margin-bottom: 20px;">
+                <a id="cadastrar-login">Já tenho uma conta</a>
+              </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+     <!-- TIPO DE CADASTRO -->
+     <div id="fundo-modal-selecionar-cadastro" class="hide">
+      <div class="modal modal-login">
+        <div id="content" style="text-align:center">
+          <br><h2>Desejo me cadastrar como</h2>
+          <i class="ri-close-fill" onclick="selecionarCadastroModal();"></i>
+          <br><br><button class="button" onclick="cadastroDoadorModal(); selecionarCadastroModal();"><a href="#" id="cadastrar-login">Doador</a></button>
+          <button class="button" onclick="selecionarCadastroModal();" style="float: left;"><a href="/sobre-nos" id="cadastrar-login">Família</a></button>
+        </div>
+      </div>
+    </div> 
+    <!-- End Modais -->
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- <script type="module" src="assets/js/inicializacaofirebase.min.js"></script> -->
+    <script type="module" src="assets/js/login.min.js"></script>
+    <script type="module" src="assets/js/logout.min.js"></script>
+    <script type="module" src="assets/js/registrodoador.min.js?v=1.0.0"></script>
+
+    <script src="assets/js/main.min.js?v=1.0.0"></script>
+
+    <script type="module">
+      import { loadCities } from './assets/js/loadCities.min.js'
+      document.addEventListener('DOMContentLoaded', loadCities);
+   </script>
+  </body>
+</html>

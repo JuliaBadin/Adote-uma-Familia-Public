@@ -1,0 +1,31 @@
+@media (max-width: 800px) {
+    main {
+        margin: 20vh 20px 10vh 20px;
+    }
+}
+
+@media (max-width: 1500px) {
+    main {
+        margin: 20vh 5vh 5vh 5vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    main {
+        margin: 30vh 200px 10vh 200px;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+h5 {
+    text-indent: 2em;
+}
+
+p {
+    line-height: 2em;
+    margin-bottom: 2em;
+    text-align: justify;
+}
