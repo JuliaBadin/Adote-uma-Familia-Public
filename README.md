@@ -5,7 +5,7 @@ O projeto "Adote Uma Família" foi criado para fornecer assistência direta às 
 
 **Sobre o Desenvolvimento**
 
-O site está hospedado no Firebase e pode ser acessado através do link rsadoteumafamilia.web.app. Utilizamos HTML, CSS e JavaScript para desenvolver o aplicativo.
+O site está hospedado no Firebase e pode ser acessado através do link https://adoteumafamilia.org. Utilizamos HTML, CSS e JavaScript para desenvolver o aplicativo.
 
 
 **Como Contribuir**
